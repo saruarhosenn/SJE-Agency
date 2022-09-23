@@ -12,11 +12,14 @@
     }
   });
 
-  /* ====== Open Mobile Menu ====== */
+  /* ====== Open Mobile & Hide Menu ====== */
   $(".menu-show-btn").click(function () {
     $(".main-menu").addClass("navBar show-menu");
   });
   $(".menu-hide-btn").click(function () {
+    $(".main-menu").removeClass("navBar show-menu");
+  });
+  $(".main-menu .menu-item .menu-link").click(function(){
     $(".main-menu").removeClass("navBar show-menu");
   });
 
