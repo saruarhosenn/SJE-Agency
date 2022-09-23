@@ -1,0 +1,656 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* 
+================================================
+Variables
+================================================
+*/
+:root {
+  /*_______ Font Family _______*/
+  --primary-font-700: "Roboto 700";
+  --primary-font-500: "Roboto 500";
+  --primary-font-400: "Roboto 400";
+  --primary-font-300: "Roboto 300";
+  --secondary-font-900: "Helvetica Neue 900";
+  --third-font-400: "Karla 400";
+
+  /*________ Font Size ________*/
+  --size-xl: 5rem;
+  --size-lg: 2.5rem;
+  --size-md: 2.2rem;
+  --size-sm: 1.6rem;
+
+  /*________ Text Color ________*/
+  --primary-color: #ffffff;
+  --secondary-color: #10121C;
+  --third-color: #4181FF;
+
+  /*_________ BG Color _________*/
+  --primary-bg: #ffffff;
+  --secondary-bg: #10121C;
+  --third-bg: #4181FF;
+  --four-bg: #0E0F17;
+  --five-bg: #0A0B11;
+}
+/* 
+================================================
+Variables
+================================================
+*/
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--primary-font-300);
+  font-size: var(--size-sm);
+  color: var(--primary-color);
+  line-height: 1.6;
+  background-color: var(--primary-bg);
+  overflow-x: hidden;
+}
+
+/* 
+==================================
+Bacic Setup
+==================================
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background-color: var(--third-bg);
+  color: var(--primary-color);
+}
+
+::selection {
+  background-color: var(--third-bg);
+  color: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--third-bg);
+  height: 6rem;
+}
+
+a,
+span,
+label {
+  display: inline-block;
+}
+
+ul li {
+  list-style: none;
+}
+
+a,
+a:focus {
+  text-decoration: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+button,
+input,
+textarea {
+  outline: 0;
+  border: 0;
+}
+
+button,
+input,
+textarea {
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4, 
+h5,
+h6 {
+  font-family: var(--secondary-font-900);
+}
+
+hr {
+  opacity: 1;
+  background-color: transparent;
+}
+
+.transition-linear {
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+a,
+button,
+img,
+.transition-ease-in-out {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 
+===================================
+Font Family
+===================================
+*/
+.primary-font-700 {
+  font-family: var(--primary-font-700);
+}
+
+.primary-font-500 {
+  font-family: var(--primary-font-500);
+}
+
+.primary-font-400 {
+  font-family: var(--primary-font-400);
+}
+
+.primary-font-300 {
+  font-family: var(--primary-font-300);
+}
+
+.secondary-font-900 {
+  font-family: var(--secondary-font-900);
+}
+
+.third-font-400 {
+  font-family: var(--third-font-400);
+}
+
+/* 
+  ===================================
+  Font Size
+  ===================================
+  */
+.size-xl {
+  font-size: var(--size-xl);
+  line-height: 1.16;
+}
+
+.size-lg {
+  font-size: var(--size-lg);
+  line-height: 1.6;
+}
+
+.size-md {
+  font-size: var(--size-md);
+  line-height: 1.36;
+}
+
+.size-sm {
+  font-size: var(--size-sm);
+  line-height: 1;
+}
+
+/* 
+  ===================================
+  Text Color
+  ===================================
+  */
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.third-color {
+  color: var(--third-color);
+}
+
+/* 
+  ===================================
+  BG Color
+  ===================================
+  */
+.primary-bg {
+  background-color: var(--primary-bg);
+}
+
+.secondary-bg {
+  background-color: var(--secondary-bg);
+}
+
+.third-bg {
+  background-color: var(--third-bg);
+}
+
+.four-bg {
+  background-color: var(--four-bg);
+}
+
+.five-bg {
+  background-color: var(--five-bg);
+}
+
+/* 
+================================================
+================================================
+Start Reuseble Css Classes
+================================================
+*/
+.section-y-space {
+  padding: 14rem 0;
+}
+
+/* 
+-------
+Back to top Btn
+--------------------------
+*/
+#scroll-up-btn {
+  opacity: 0;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 99;
+  background-color: var(--third-bg);
+  width: 4.5rem;
+  height: 4.5rem;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+/* 
+================================================
+End Reuseble Css Classes
+================================================
+================================================
+*/
+
+
+/* 
+=========================================
+Start Header Section
+=========================================
+*/
+.transparent-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.nav-logo .nav-logo-link {
+  padding: 2.7rem 4.5rem 2.7rem 3.3rem;
+  background-color: var(--third-bg);
+}
+
+.navBar .menu-show-btn {
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-show-btn .menu-bar {
+  width: 2.7rem;
+  height: 0.3rem;
+  background-color: var(--primary-color);
+  margin: 0.6rem 0;
+}
+
+.navBar .main-menu  {
+  margin-right: 8rem;
+}
+
+.main-menu .menu-hide-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.main-menu .menu-item:not(:first-child) {
+  margin-left: 4.7rem;
+}
+
+.main-menu .menu-item .menu-link:hover {
+  color: var(--third-color);
+}
+
+.main-menu .menu-item.current .menu-link {
+  color: var(--third-color);
+}
+
+.main-menu .menu-item.current .menu-link::after {
+  content: "";
+  position: absolute;
+  top: 335%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--third-bg);
+}
+
+.navBar .contact-phone {
+  margin-right: 16.1rem;
+}
+
+.contact-phone .contact-phone-text {
+  font-size: 2.2rem;
+  line-height: 1.5rem;
+}
+
+.contact-phone .contact-phone-text:hover {
+  color: inherit;
+}
+
+/*
+----------------
+Sticky Menu
+----------------
+*/
+.stick {
+  background-color: var(--secondary-bg);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  -webkit-animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
+  animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* 
+=========================================
+End Header Section
+=========================================
+*/
+
+/* 
+=========================================
+Start Hero Section
+=========================================
+*/
+.hero-section {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(16, 18, 28, 1)), to(rgba(16, 18, 28, 0.5))) , url("../images/hero/hero-bg.jpg") no-repeat top / cover;
+  background: -o-linear-gradient(left, rgba(16, 18, 28, 1), rgba(16, 18, 28, 0.5)) , url("../images/hero/hero-bg.jpg") no-repeat top / cover;
+  background: linear-gradient(to right, rgba(16, 18, 28, 1), rgba(16, 18, 28, 0.5)) , url("../images/hero/hero-bg.jpg") no-repeat top / cover;
+  padding: 31rem 0 22.8rem;
+}
+
+.hero {
+  max-width: 84.1rem;
+}
+
+.hero .hero-title {
+  line-height: 1.34;
+  margin-bottom: 5.8rem;
+}
+
+.hero .hero-btn {
+  font-size: 2.5rem;
+  padding: 2.8rem 5.6rem;
+  line-height: 1.6;
+}
+
+.hero .hero-btn:hover {
+  color: inherit;
+}
+/* 
+=========================================
+End Hero Section
+=========================================
+*/
+
+/* 
+=========================================
+Start Who We Are Section
+=========================================
+*/
+.who-we-are .who-we-are-title {
+  margin-bottom: 4.5rem;
+}
+/* 
+=========================================
+End Who We Are Section
+=========================================
+*/
+
+/* 
+=========================================
+Start Markets Section
+=========================================
+*/
+.markets {
+  margin-bottom: 2.4rem;
+}
+
+.markets-map {
+  margin-bottom: 9.5rem;
+}
+
+.markets-map-text-link-wrap .markets-map-text-link {
+  line-height: 1.04;
+}
+
+.markets-map-text-link-wrap .markets-map-text-link:hover {
+  color: var(--primary-color);
+}
+/* 
+=========================================
+End Markets Section
+=========================================
+*/
+
+/* 
+=========================================
+Start Offer Section
+=========================================
+*/
+.offer {
+  margin-bottom: 8rem;
+}
+
+.offer-content {
+  padding: 3.9rem 3.5rem;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.o-f-1 p {
+  margin-top: 2.3rem;
+}
+
+.offer-content .offer-content-icon {
+  margin-bottom: 4rem;
+}
+/* 
+=========================================
+End Offer Section
+=========================================
+*/
+
+/* 
+=========================================
+Start Contact Section
+=========================================
+*/
+.contact {
+  margin-bottom: 6rem;
+}
+
+.contact .contact-title {
+  margin-bottom: 7rem;
+}
+
+.contact .contact-description-1 {
+  margin-bottom: 4rem;
+}
+
+.contact-row {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.contact-row > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-form .contact-field {
+  padding: 1.6rem 4.2rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.contact-form .contact-field.contact-field-message {
+  min-height: 17.6rem;
+}
+
+.contact-form .contact-field::-webkit-input-placeholder {
+  font-family: var(--primary-font-300);
+  font-family: var(--size-lg);
+  color: var(--third-color);
+  line-height: 1.6;
+}
+
+.contact-form .contact-field::-moz-placeholder {
+  font-family: var(--primary-font-300);
+  font-family: var(--size-lg);
+  color: var(--third-color);
+  line-height: 1.6;
+}
+
+.contact-form .contact-field:-ms-input-placeholder {
+  font-family: var(--primary-font-300);
+  font-family: var(--size-lg);
+  color: var(--third-color);
+  line-height: 1.6;
+}
+
+.contact-form .contact-field::-ms-input-placeholder {
+  font-family: var(--primary-font-300);
+  font-family: var(--size-lg);
+  color: var(--third-color);
+  line-height: 1.6;
+}
+
+.contact-form .contact-field,
+.contact-form .contact-field::placeholder {
+  font-family: var(--primary-font-300);
+  font-family: var(--size-lg);
+  color: var(--third-color);
+  line-height: 1.6;
+}
+
+.contact-form .contact-submit {
+  font-size: 2.5rem;
+  padding: 1.2rem 4.2rem;
+  line-height: 1.6;
+}
+/* 
+=========================================
+End Contact Section
+=========================================
+*/
+
+/* 
+=========================================
+Start Footer Section
+=========================================
+*/
+footer {
+  padding: 3.8rem 0;
+  border-top: 1px solid var(--primary-color);
+}
+
+.footer-copyright .footer-copyright-text {
+  line-height: 1.5 !important;
+}
+
+.footer-page .footer-page-item:not(:last-child) {
+  margin-right: 4.7rem;
+}
+
+.footer-page .footer-page-item .footer-page-link.active-color {
+  color: var(--third-color);
+}
+
+.footer-page .footer-page-item .footer-page-link:hover {
+  color: var(--third-color);
+}
+/* 
+=========================================
+End Footer Section
+=========================================
+*/
