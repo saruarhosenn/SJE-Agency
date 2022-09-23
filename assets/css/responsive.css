@@ -379,6 +379,9 @@
   .contact .contact-title {
     margin-bottom: 3rem;
   }
+  .contact-form .contact-field {
+    padding: 1.6rem 2.8rem;
+  }
 }
 
 @media (max-width: 428px) {
